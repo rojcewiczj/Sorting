@@ -32,7 +32,14 @@ def merge( arrA, arrB ):
 # TO-DO: implement the Merge Sort function below USING RECURSION
 def merge_sort( arr ):
     # TO-DO
-
+    for i, num in enumerate(arr): 
+        try: 
+            if arr[i+1] < num: 
+                arr[i] = arr[i+1] 
+                arr[i+1] = num 
+                merge_sort(arr) 
+        except IndexError: 
+            pass
     return arr
 
 
